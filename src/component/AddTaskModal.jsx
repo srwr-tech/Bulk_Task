@@ -45,7 +45,7 @@ const AddTaskModal = ({ isOpen, onClose, onSave }) => {
       const updatedFormData = { ...formData, userId };
 
       // ✅ Send request to backend
-      const response = await fetch("https://phenomenal-jalebi-e6bc93.netlify.app/api/tasks", {
+      const response = await fetch("https://srwr-backend.onrender.com/api/tasks", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedFormData),
