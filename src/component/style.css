@@ -1,0 +1,63 @@
+.container {
+  max-width: 800px;
+  height: 100vh;
+  margin: 0% auto;
+  text-align: center;
+  position: sticky;
+  top: 0%;
+  }
+  .container h2{
+    color: #333;
+  }
+  
+  .box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    height: 100vh;
+    border: 2px solid red;
+  }
+  
+  .input-field, .file-input {
+    width: -webkit-fill-available;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .import-button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .import-button:hover {
+    background: #0056b3;
+  }
+  
+  .message {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .success {
+    color: green;
+  }
+  
+  .info {
+    color: blue;
+  }
+  
+  .tasks-container {
+    margin-top: 20px;
+  }
+  .LogOutButton {
+   position: absolute;
+   left:5%;
+   bottom: 5%; 
+  }

@@ -1,0 +1,64 @@
+.container {
+  text-align: center;
+  margin: 20px;
+}
+
+.box {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  display: inline-block;
+  background: #f9f9f9;
+}
+
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.import-btn {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.import-btn:hover {
+  background: #45a049;
+}
+
+.message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.success {
+  background: #d4edda;
+  color: #155724;
+}
+
+.info {
+  background: #cce5ff;
+  color: #004085;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background: #f2f2f2;
+}
