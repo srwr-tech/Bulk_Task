@@ -70,11 +70,15 @@ import EditTaskModal from "../EditTaskModal";
       {
         Header: "Task Status",
         accessor: "completed",
-        Cell: ({ value }) => (
-          <span style={value ? styles.completedStatus : styles.pendingStatus}>
-            {value ? "✅ Completed" : "⏳ Pending"}
-          </span>
-        ),
+        Cell: ({ value }) => {
+          // Convert 'false' string to actual boolean
+          const isCompleted = value === true || value === "true"; // Ensures boolean conversion
+          return (
+            <span style={isCompleted ? styles.completedStatus : styles.pendingStatus}>
+              {isCompleted ? "✅ Completed" : "⏳ Pending"}
+            </span>
+          );
+        },
       },
 {
   Header: "Actions",
