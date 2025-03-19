@@ -27,7 +27,7 @@ import EditTaskModal from "../EditTaskModal";
         console.log("User ID:", userId); // Debugging
 
         // ✅ Ensure userId is correctly passed in the URL
-        const response = await fetch(`http://localhost:5000/api/taskers/${userId}`, {
+        const response = await fetch(`https://phenomenal-jalebi-e6bc93.netlify.app/api/taskers/${userId}`, {
           method: "GET",
           headers: { "Content-Type": "application/json" }
         });
@@ -105,7 +105,7 @@ import EditTaskModal from "../EditTaskModal";
 
   const handleSave = async (updatedTask) => {
     try {
-      await fetch(`http://localhost:5000/api/tasks/${updatedTask._id}`, {
+      await fetch(`https://phenomenal-jalebi-e6bc93.netlify.app/api/tasks/${updatedTask._id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedTask),
@@ -123,7 +123,7 @@ import EditTaskModal from "../EditTaskModal";
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this record?")) {
       try {
-        await fetch(`http://localhost:5000/api/tasks/${id}`, { method: "DELETE" });
+        await fetch(`https://phenomenal-jalebi-e6bc93.netlify.app/api/tasks/${id}`, { method: "DELETE" });
         setData((prevData) => prevData.filter((item) => item._id !== id));
       } catch (error) {
         console.error("Error deleting task:", error);
@@ -134,7 +134,7 @@ import EditTaskModal from "../EditTaskModal";
   const handleComplete = async (id) => {
     console.log(" sarwar")
     try {
-      const response = await fetch(`http://localhost:5000/api/taskss/${id}`, {
+      const response = await fetch(`https://phenomenal-jalebi-e6bc93.netlify.app/api/taskss/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ completed: true }),
