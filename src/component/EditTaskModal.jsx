@@ -37,7 +37,7 @@ const EditTaskModal = ({ isOpen, task, onClose, onSave }) => {
     e.preventDefault();
     
     try {
-      const response = await fetch(`https://phenomenal-jalebi-e6bc93.netlify.app/api/tasks/${task._id}`, {
+      const response = await fetch(`https://srwr-backend.onrender.com/api/tasks/${task._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
