@@ -15,7 +15,7 @@ const LinkOrFileInput = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/tasks");
+        const response = await fetch("https://phenomenal-jalebi-e6bc93.netlify.app/api/tasks");
         const data = await response.json();
         setTasks(data);
       } catch (error) {
@@ -115,7 +115,7 @@ const sendDataToBackend = async (tasks) => {
           completed: "false"  // Default to "false"
       }));
 
-      const response = await fetch("http://localhost:5000/api/import", {
+      const response = await fetch("https://phenomenal-jalebi-e6bc93.netlify.app/api/import", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ tasks: formattedTasks }) // ✅ Send correctly formatted data
