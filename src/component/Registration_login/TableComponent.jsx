@@ -76,27 +76,32 @@ import EditTaskModal from "../EditTaskModal";
           </span>
         ),
       },
-      {
-        Header: "Actions",
-        accessor: "actions",
-        Cell: ({ row }) => (
-          <div style={styles.actionButtons}>
-            <button style={styles.editButton} onClick={() => handleEdit(row.original)}>
-              <FaEdit />
-            </button>
-            <button style={styles.deleteButton} onClick={() => handleDelete(row.original._id)}>
-              <FaTrash />
-            </button>
-            <button
-              style={row.original.completed ? styles.completedButtonDisabled : styles.completedButton}
-              onClick={() => handleComplete(row.original._id)}
-              disabled={row.original.completed}
-            >
-              <FaCheckCircle />
-            </button>
-          </div>
-        ),
-      },
+{
+  Header: "Actions",
+  accessor: "actions",
+  Cell: ({ row }) => {
+    const isCompleted = row.original.completed === true || row.original.completed === "true"; // Convert string to boolean
+
+    return (
+      <div style={styles.actionButtons}>
+        <button style={styles.editButton} onClick={() => handleEdit(row.original)}>
+          <FaEdit />
+        </button>
+        <button style={styles.deleteButton} onClick={() => handleDelete(row.original._id)}>
+          <FaTrash />
+        </button>
+        <button
+          style={isCompleted ? styles.completedButtonDisabled : styles.completedButton}
+          onClick={() => handleComplete(row.original._id)}
+          disabled={isCompleted} // ✅ Disable only if completed
+        >
+          <FaCheckCircle />
+        </button>
+      </div>
+    );
+  },
+}
+
     ],
     [data]
   );
