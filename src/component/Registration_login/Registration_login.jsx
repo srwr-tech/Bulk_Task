@@ -32,7 +32,7 @@ const [loginData, setLoginData] = useState({
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://phenomenal-jalebi-e6bc93.netlify.app/auth/signup", {
+      const response = await fetch("https://srwr-backend.onrender.com/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(signupData),
@@ -54,7 +54,7 @@ const [loginData, setLoginData] = useState({
     console.log(" function called")
     e.preventDefault();
     try {
-      const response = await fetch("https://phenomenal-jalebi-e6bc93.netlify.app/auth/signin", {
+      const response = await fetch("https://srwr-backend.onrender.com/auth/signin", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(loginData),
